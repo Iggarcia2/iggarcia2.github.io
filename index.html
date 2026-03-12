@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fermentación VHG · Caso 1.05 a 1.00 atm abs</title>
+  <style>
+    :root{
+      --bg:#f5f7f2;
+      --ink:#18211d;
+      --muted:#5d6965;
+      --line:#d6ddd7;
+      --card:#ffffff;
+      --soft:#f8faf6;
+      --navy:#0b0d0c;
+      --blue:#506070;
+      --cyan:#84b51d;
+      --green:#70a818;
+      --amber:#d5a300;
+      --shadow:0 18px 45px rgba(15,23,42,.08);
+      --radius:22px;
+      --max:1220px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg, #080a08 0%, #141915 18%, #222b18 24%, var(--bg) 24%, var(--bg) 100%);
+    }
+    a{color:var(--blue); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+
+    .brand{
+      display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:18px;
+    }
+    .logo-box{
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#ffffff; border:1px solid rgba(15,23,42,.08);
+      border-radius:20px; padding:12px 18px;
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+    }
+    .brand img{
+      display:block; width:min(250px,42vw); height:auto;
+      filter:none;
+    }
+    .hero{padding:56px 0 40px; color:#fff}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 14px; border-radius:999px;
+      border:1px solid rgba(143,190,31,.28);
+      background:rgba(143,190,31,.08);
+      color:#edf4df; font-size:12px; text-transform:uppercase; letter-spacing:.08em;
+    }
+    .hero-grid{display:grid; grid-template-columns:1.35fr .95fr; gap:24px; align-items:end; margin-top:18px}
+    h1{margin:0 0 14px; font-size:clamp(34px,5vw,56px); line-height:1.03; letter-spacing:-.03em}
+    .hero p{margin:0; max-width:850px; color:#d8e0d8; line-height:1.65; font-size:16px}
+    .hero-side{
+      background:rgba(255,255,255,.05); border:1px solid rgba(143,190,31,.22); border-radius:24px;
+      padding:20px; box-shadow:0 18px 40px rgba(0,0,0,.14)
+    }
+    .hero-side h3{margin:0 0 12px; font-size:16px; color:#f4f7ec}
+    .mini{display:grid; gap:10px}
+    .mini div{display:flex; justify-content:space-between; gap:16px; border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:10px; font-size:14px}
+    .mini div:last-child{border-bottom:none; padding-bottom:0}
+    .mini span{color:#d8e0d8}
+    .mini strong{color:#fff}
+
+    .section{padding:28px 0}
+    .panel{
+      background:var(--card); border:1px solid rgba(15,23,42,.06); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:28px;
+    }
+    .section-title{display:flex; justify-content:space-between; align-items:end; gap:22px; margin-bottom:20px}
+    .section-title h2{margin:0; font-size:28px; letter-spacing:-.02em}
+    .section-title p{margin:0; max-width:760px; color:var(--muted); line-height:1.6}
+
+    .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .card{background:var(--soft); border:1px solid var(--line); border-radius:18px; padding:18px}
+    .label{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:10px}
+    .value{font-size:30px; font-weight:800; letter-spacing:-.03em; margin-bottom:8px}
+    .sub{font-size:14px; line-height:1.55; color:var(--muted)}
+
+    .two{display:grid; grid-template-columns:1.12fr .88fr; gap:18px}
+    .three{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .chart{background:var(--soft); border:1px solid var(--line); border-radius:20px; padding:18px}
+    .chart h3{margin:0 0 8px; font-size:17px}
+    .chart p{margin:0 0 14px; color:var(--muted); line-height:1.55; font-size:14px}
+    .chart-frame{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px}
+    .legend{display:flex; flex-wrap:wrap; gap:14px; margin-top:10px}
+    .legend span{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted)}
+    .dot{width:10px; height:10px; border-radius:999px; display:inline-block}
+
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; font-size:12px; margin-top:8px; font-weight:600}
+    .pill.blue{background:#edf4df; color:#506070}
+    .pill.green{background:#eef6e3; color:#54710f}
+    .pill.amber{background:#fff3cf; color:#8e6500}
+
+    table{width:100%; border-collapse:collapse; font-size:14px}
+    th,td{padding:12px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+    th{background:#f8fafc; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.06em}
+    tr:last-child td{border-bottom:none}
+    .table-wrap{overflow:auto; background:#fff; border:1px solid var(--line); border-radius:16px}
+
+    .eq{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0b0d0c; color:#e4e9e4; border-radius:16px; padding:14px 16px; line-height:1.7; font-size:13px; overflow:auto}
+
+    .sources{display:grid; gap:14px}
+    .source{background:var(--soft); border:1px solid var(--line); border-radius:18px; padding:18px}
+    .source h4{margin:0 0 8px; font-size:17px}
+    .source p{margin:0 0 10px; color:var(--muted); line-height:1.55; font-size:14px}
+    .links{display:flex; flex-wrap:wrap; gap:10px}
+    .links a{display:inline-flex; align-items:center; gap:8px; padding:9px 12px; border-radius:999px; border:1px solid var(--line); background:#fff; font-size:13px}
+
+    .footer{padding:10px 0 44px; color:var(--muted); font-size:13px; line-height:1.6}
+
+    @media (max-width:1024px){
+      .hero-grid,.two,.cards,.three{grid-template-columns:1fr}
+      .section-title{display:block}
+      .section-title p{margin-top:10px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand"><div class="logo-box"><img src="data:image/png;base64,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" alt="Bio4 Bioetanol Río Cuarto S.A." /></div></div>
+      <span class="badge">HTML ejecutivo · escenario operativo más probable</span>
+      <div class="hero-grid">
+        <div>
+          <h1>Impacto de bajar la presión de cabezal de 1.05 a 1.00 atm abs en fermentación VHG</h1>
+          <p>
+            Vista orientada a presentación técnica y gerencial. El documento concentra solo el caso más viable de implementación:
+            normalización del cabezal desde 1.05 a 1.00 atm abs en un fermentador vertical de 15 m, con foco en gradiente hidrostático,
+            alivio de CO<sub>2</sub> disuelto, mejora esperable de rendimiento y valor económico anual recuperable.
+          </p>
+        </div>
+        <aside class="hero-side">
+          <h3>Datos base del caso</h3>
+          <div class="mini">
+            <div><span>Altura del fermentador</span><strong>15 m</strong></div>
+            <div><span>Producción</span><strong>500,000 L/día</strong></div>
+            <div><span>Densidad del mosto</span><strong>1080–1120 kg/m³</strong></div>
+            <div><span>Cabezal actual</span><strong>1.05 atm abs</strong></div>
+            <div><span>Cabezal objetivo</span><strong>1.00 atm abs</strong></div>
+            <div><span>Mejora objetivo</span><strong>0.18%–0.25%</strong></div>
+            <div><span>Precio bioetanol</span><strong>ARS 917.323/L</strong></div>
+            <div><span>Tipo de cambio</span><strong>ARS 1415/USD</strong></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="panel">
+        <div class="section-title">
+          <div><h2>1. Resumen ejecutivo</h2></div>
+          <p>
+            En este caso, la mejora no proviene de una “despresurización masiva” del reactor sino de reducir el equilibrio local de CO<sub>2</sub>
+            y mejorar el stripping en una operación que hoy ya está muy cerca de la atmosférica. La hipótesis defendible es una recuperación de rendimiento
+            del orden de 0.18% a 0.25%, siempre que el cuello de botella real sea el CO<sub>2</sub> disuelto y no otra limitación dominante.
+          </p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Presión absoluta en el fondo</div>
+            <div class="value">2.62–2.68 atm</div>
+            <div class="sub">Situación actual a 1.05 atm abs en cabezal, con 15 m de columna líquida.</div>
+          </div>
+          <div class="card">
+            <div class="label">Presión absoluta en el fondo</div>
+            <div class="value">2.57–2.63 atm</div>
+            <div class="sub">Situación objetivo a 1.00 atm abs. La baja hidrostática es chica, pero sistemática en toda la columna.</div>
+          </div>
+          <div class="card">
+            <div class="label">Alivio relativo de C*</div>
+            <div class="value">1.9%–4.8%</div>
+            <div class="sub">Reducción del equilibrio de CO<sub>2</sub> disuelto según la altura del tanque, asumiendo proporcionalidad con presión.</div>
+          </div>
+          <div class="card">
+            <div class="label">Beneficio bruto anual</div>
+            <div class="value">USD 0.21–0.30 M</div>
+            <div class="sub">Rango económico anual para una mejora de 0.18% a 0.25%, antes de OPEX incremental.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two">
+        <div class="panel">
+          <div class="section-title">
+            <div><h2>2. Base de cálculo</h2></div>
+            <p>Se normaliza todo en atm abs y se aplica el modelo hidrostático clásico para comparar solo dos estados: 1.05 y 1.00 atm abs en cabezal.</p>
+          </div>
+          <div class="eq">P(z) = P_cabezal + ρ·g·z
+
+C*₍CO₂₎ ≈ pCO₂ / H_eff
+
+Reducción relativa de C* ≈ (P_actual − P_objetivo) / P_actual</div>
+          <div class="pill blue">Dato clave: la mitad inferior del tanque sigue muy por encima de 1 atm, aun cuando el cabezal ya es casi atmosférico.</div>
+          <div class="pill green">Interpretación: una baja chica en el cabezal puede ser relevante si la levadura estaba operando cerca del umbral inhibitorio por dCO₂.</div>
+        </div>
+        <div class="panel">
+          <div class="section-title">
+            <div><h2>3. Tabla de presión</h2></div>
+            <p>Rango calculado para densidades de 1080 a 1120 kg/m³.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Altura</th>
+                  <th>1.05 atm abs</th>
+                  <th>1.00 atm abs</th>
+                  <th>Reducción relativa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Superficie (0 m)</td>
+                  <td>1.05 atm</td>
+                  <td>1.00 atm</td>
+                  <td>4.76%</td>
+                </tr>
+                <tr>
+                  <td>Mitad (7.5 m)</td>
+                  <td>1.834–1.863 atm</td>
+                  <td>1.784–1.813 atm</td>
+                  <td>2.68%–2.73%</td>
+                </tr>
+                <tr>
+                  <td>Fondo (15 m)</td>
+                  <td>2.618–2.677 atm</td>
+                  <td>2.568–2.627 atm</td>
+                  <td>1.87%–1.91%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two">
+        <div class="panel chart">
+          <h3>4. Perfil de presión a lo largo de la columna</h3>
+          <p>
+            Comparación visual entre el caso actual y el caso objetivo. La distancia entre ambas curvas es fija en términos de cabezal,
+            pero su efecto relativo sobre CO<sub>2</sub> disuelto es mayor en la parte superior que en el fondo.
+          </p>
+          <div class="chart-frame">
+            <svg viewBox="0 0 720 390" width="100%" role="img" aria-label="Perfil de presión por altura">
+              <rect x="0" y="0" width="720" height="390" fill="#ffffff"/>
+              <line x1="78" y1="28" x2="78" y2="330" stroke="#a8b2ad" stroke-width="1.2"/>
+              <line x1="78" y1="330" x2="675" y2="330" stroke="#a8b2ad" stroke-width="1.2"/>
+              <text x="30" y="34" font-size="12" fill="#68756f">atm abs</text>
+              <text x="622" y="365" font-size="12" fill="#68756f">Altura (m)</text>
+
+              <g font-size="12" fill="#68756f">
+                <text x="52" y="332">1.0</text>
+                <text x="52" y="271">1.4</text>
+                <text x="52" y="210">1.8</text>
+                <text x="52" y="149">2.2</text>
+                <text x="52" y="88">2.6</text>
+              </g>
+              <g stroke="#e4e9e4" stroke-width="1">
+                <line x1="78" y1="330" x2="675" y2="330"/>
+                <line x1="78" y1="269" x2="675" y2="269"/>
+                <line x1="78" y1="208" x2="675" y2="208"/>
+                <line x1="78" y1="147" x2="675" y2="147"/>
+                <line x1="78" y1="86" x2="675" y2="86"/>
+              </g>
+
+              <g font-size="12" fill="#68756f">
+                <text x="74" y="348">0</text>
+                <text x="360" y="348">7.5</text>
+                <text x="662" y="348">15</text>
+              </g>
+
+              <polyline points="78,323 377,203 675,84" fill="none" stroke="#506070" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="78,330 377,211 675,92" fill="none" stroke="#84b51d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <circle cx="78" cy="323" r="5" fill="#506070"/>
+              <circle cx="377" cy="203" r="5" fill="#506070"/>
+              <circle cx="675" cy="84" r="5" fill="#506070"/>
+              <circle cx="78" cy="330" r="5" fill="#84b51d"/>
+              <circle cx="377" cy="211" r="5" fill="#84b51d"/>
+              <circle cx="675" cy="92" r="5" fill="#84b51d"/>
+
+              <text x="92" y="318" font-size="12" fill="#475867">1.05</text>
+              <text x="92" y="338" font-size="12" fill="#5e7c18">1.00</text>
+              <text x="393" y="197" font-size="12" fill="#475867">1.83–1.86</text>
+              <text x="393" y="220" font-size="12" fill="#5e7c18">1.78–1.81</text>
+              <text x="534" y="78" font-size="12" fill="#475867">2.62–2.68</text>
+              <text x="534" y="105" font-size="12" fill="#5e7c18">2.57–2.63</text>
+            </svg>
+          </div>
+          <div class="legend">
+            <span><i class="dot" style="background:#506070"></i> Estado actual · 1.05 atm abs</span>
+            <span><i class="dot" style="background:#84b51d"></i> Estado objetivo · 1.00 atm abs</span>
+          </div>
+        </div>
+
+        <div class="panel chart">
+          <h3>5. Alivio relativo del equilibrio de CO₂ disuelto</h3>
+          <p>
+            Asumiendo que el equilibrio de CO<sub>2</sub> disuelto sigue aproximadamente la presión local, la mejora relativa es mayor en superficie
+            y se atenúa hacia el fondo por el peso de la columna líquida.
+          </p>
+          <div class="chart-frame">
+            <svg viewBox="0 0 560 390" width="100%" role="img" aria-label="Reducción relativa de equilibrio de CO2">
+              <rect width="560" height="390" fill="#ffffff"/>
+              <line x1="66" y1="28" x2="66" y2="330" stroke="#a8b2ad" stroke-width="1.2"/>
+              <line x1="66" y1="330" x2="520" y2="330" stroke="#a8b2ad" stroke-width="1.2"/>
+              <g stroke="#e4e9e4" stroke-width="1">
+                <line x1="66" y1="330" x2="520" y2="330"/>
+                <line x1="66" y1="270" x2="520" y2="270"/>
+                <line x1="66" y1="210" x2="520" y2="210"/>
+                <line x1="66" y1="150" x2="520" y2="150"/>
+                <line x1="66" y1="90" x2="520" y2="90"/>
+              </g>
+              <g font-size="12" fill="#68756f">
+                <text x="38" y="333">0</text>
+                <text x="30" y="273">1.5</text>
+                <text x="30" y="213">3.0</text>
+                <text x="30" y="153">4.5</text>
+                <text x="30" y="93">6.0</text>
+              </g>
+              <text x="22" y="22" font-size="12" fill="#68756f">%</text>
+              <rect x="108" y="92" width="78" height="238" rx="14" fill="#506070" opacity="0.88"/>
+              <rect x="246" y="221" width="78" height="109" rx="14" fill="#84b51d" opacity="0.88"/>
+              <rect x="384" y="236" width="78" height="94" rx="14" fill="#70a818" opacity="0.88"/>
+              <text x="126" y="350" font-size="13" fill="#44525a">Superficie</text>
+              <text x="281" y="350" font-size="13" fill="#44525a">Mitad</text>
+              <text x="412" y="350" font-size="13" fill="#44525a">Fondo</text>
+              <text x="123" y="82" font-size="14" fill="#506070" font-weight="700">4.76%</text>
+              <text x="256" y="211" font-size="14" fill="#5e7c18" font-weight="700">2.68–2.73%</text>
+              <text x="392" y="226" font-size="14" fill="#54710f" font-weight="700">1.87–1.91%</text>
+            </svg>
+          </div>
+          <div class="pill amber">Conclusión visual: el cambio es pequeño pero consistente en toda la columna, y fisiológicamente puede ser suficiente para sacar a parte del volumen de una zona de alta sensibilidad al dCO₂.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-title">
+          <div><h2>6. Escenarios de mejora económica para 1.05 → 1.00 atm abs</h2></div>
+          <p>
+            Para este caso conviene mostrar un rango prudente. Se incluyen tres puntos: conservador defendible, valor intermedio y techo prudente del escenario operativo normalizado.
+          </p>
+        </div>
+        <div class="three">
+          <div class="chart">
+            <h3>Escenario conservador</h3>
+            <p>Recuperación neta de 0.18% del rendimiento de etanol.</p>
+            <div class="value">900 L/día</div>
+            <div class="sub">ARS 301.3 M/año · USD 213.0 k/año</div>
+          </div>
+          <div class="chart">
+            <h3>Escenario intermedio</h3>
+            <p>Recuperación neta de 0.20% con control estable de presión.</p>
+            <div class="value">1,000 L/día</div>
+            <div class="sub">ARS 334.8 M/año · USD 236.6 k/año</div>
+          </div>
+          <div class="chart">
+            <h3>Escenario alto prudente</h3>
+            <p>Recuperación neta de 0.25% si el cuello dominante era dCO₂.</p>
+            <div class="value">1,250 L/día</div>
+            <div class="sub">ARS 418.5 M/año · USD 295.8 k/año</div>
+          </div>
+        </div>
+        <div class="chart" style="margin-top:18px">
+          <h3>Visual económico</h3>
+          <p>Comparación del valor bruto anual recuperable dentro del rango 0.18%–0.25%.</p>
+          <div class="chart-frame">
+            <svg viewBox="0 0 760 360" width="100%" role="img" aria-label="Comparación económica anual">
+              <rect width="760" height="360" fill="#ffffff"/>
+              <line x1="80" y1="30" x2="80" y2="302" stroke="#a8b2ad" stroke-width="1.2"/>
+              <line x1="80" y1="302" x2="708" y2="302" stroke="#a8b2ad" stroke-width="1.2"/>
+              <g stroke="#e4e9e4" stroke-width="1">
+                <line x1="80" y1="302" x2="708" y2="302"/>
+                <line x1="80" y1="248" x2="708" y2="248"/>
+                <line x1="80" y1="194" x2="708" y2="194"/>
+                <line x1="80" y1="140" x2="708" y2="140"/>
+                <line x1="80" y1="86" x2="708" y2="86"/>
+              </g>
+              <g font-size="12" fill="#68756f">
+                <text x="34" y="306">0</text>
+                <text x="18" y="252">100</text>
+                <text x="18" y="198">200</text>
+                <text x="18" y="144">300</text>
+                <text x="18" y="90">400</text>
+                <text x="18" y="28">ARS M/año</text>
+              </g>
+              <rect x="132" y="98" width="120" height="204" rx="18" fill="#506070"/>
+              <rect x="320" y="75" width="120" height="227" rx="18" fill="#84b51d"/>
+              <rect x="508" y="18" width="120" height="284" rx="18" fill="#70a818"/>
+              <text x="170" y="322" font-size="13" fill="#44525a">0.18%</text>
+              <text x="358" y="322" font-size="13" fill="#44525a">0.20%</text>
+              <text x="546" y="322" font-size="13" fill="#44525a">0.25%</text>
+              <text x="145" y="88" font-size="14" fill="#506070" font-weight="700">301.3</text>
+              <text x="333" y="65" font-size="14" fill="#5e7c18" font-weight="700">334.8</text>
+              <text x="521" y="14" font-size="14" fill="#54710f" font-weight="700">418.5</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two">
+        <div class="panel">
+          <div class="section-title">
+            <div><h2>7. Mensaje técnico para exponer</h2></div>
+            <p>Versión breve y clara para explicar el racional del proyecto frente a gerencia, operaciones o auditoría.</p>
+          </div>
+          <div class="card" style="background:#fff">
+            <div class="sub" style="color:#44525a">
+              Aunque el cabezal actual ya está cerca de la presión atmosférica, el fermentador opera con una columna líquida de 15 m que lleva la presión absoluta del fondo a aproximadamente 2.62–2.68 atm. Al normalizar el cabezal a 1.00 atm abs, el equilibrio local de CO<sub>2</sub> disuelto cae entre 1.9% y 4.8% según la altura. Esa reducción es pequeña en términos absolutos, pero puede ser suficiente para aliviar el estrés barométrico y la acidificación intracelular en la fracción más comprometida del volumen. Si el sistema se encontraba operando cerca del umbral de inhibición por dCO<sub>2</sub>, la recuperación neta de rendimiento del orden de 0.18% a 0.25% es técnicamente defendible.
+            </div>
+          </div>
+          <div class="pill blue">Clave de venta: no se propone un cambio extremo de operación, sino una normalización de cabezal de bajo riesgo y alto potencial de repago.</div>
+        </div>
+        <div class="panel">
+          <div class="section-title">
+            <div><h2>8. Recomendaciones de implementación</h2></div>
+            <p>Foco en el caso 1.05 → 1.00 atm abs, sin entrar en vacío parcial.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Acción</th>
+                  <th>Objetivo</th>
+                  <th>Prioridad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Extracción controlada de cabezal con VFD</td>
+                  <td>Sostener 0.99–1.01 atm abs de forma estable</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Demister y trampa de condensados</td>
+                  <td>Evitar arrastre de espuma y recuperar vapores condensables</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Monitoreo continuo de presión, temperatura y caudal gaseoso</td>
+                  <td>Verificar estabilidad operativa y trazabilidad</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Cuantificación de etanol en condensado/venteos</td>
+                  <td>Evitar que el beneficio bruto se diluya por pérdidas</td>
+                  <td>Media</td>
+                </tr>
+                <tr>
+                  <td>Campaña piloto con muestra de batches</td>
+                  <td>Validar mejora real de etanol, azúcar residual y comportamiento de espuma</td>
+                  <td>Alta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pill amber">Seguridad: usar equipos y estrategia de manejo de vapores compatibles con atmósferas potencialmente explosivas y con presencia de etanol.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-title">
+          <div><h2>9. Fuentes y links de investigación</h2></div>
+          <p>Bloque listo para citar al final de la presentación o usar como bibliografía clickeable en la versión HTML.</p>
+        </div>
+        <div class="sources">
+          <div class="source">
+            <h4>Aguilera et al. (2005)</h4>
+            <p>Respuesta fisiológica y transcriptómica de Saccharomyces cerevisiae a altas concentraciones de CO₂. Base útil para el argumento de estrés por CO₂ disuelto.</p>
+            <div class="links">
+              <a href="https://pubmed.ncbi.nlm.nih.gov/15780657/" target="_blank" rel="noopener">PubMed</a>
+            </div>
+          </div>
+          <div class="source">
+            <h4>Ramalingam & Finn (1977) · Vacuferm Process</h4>
+            <p>Referencia clásica sobre fermentación alcohólica bajo vacío. Acá se usa como sustento mecanístico, aunque esta versión del HTML no desarrolla el escenario de vacío parcial.</p>
+            <div class="links">
+              <a href="https://www.osti.gov/biblio/6780716" target="_blank" rel="noopener">OSTI record</a>
+            </div>
+          </div>
+          <div class="source">
+            <h4>Knatchbull & Slaughter (1987)</h4>
+            <p>Efecto de bajas presiones de CO₂ sobre la absorción de aminoácidos por levaduras durante fermentación. Útil para respaldar la idea de alivio fisiológico al bajar la presión efectiva de CO₂.</p>
+            <div class="links">
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/j.2050-0416.1987.tb04530.x" target="_blank" rel="noopener">Wiley Online Library</a>
+            </div>
+          </div>
+          <div class="source">
+            <h4>Guadalupe-Daqui et al. (2023)</h4>
+            <p>Trabajo reciente sobre efecto de CO₂ en tasas de fermentación, productos metabólicos e indicadores de estrés de levadura. Muy útil para conectar dCO₂ con rendimiento y estrés celular.</p>
+            <div class="links">
+              <a href="https://academic.oup.com/jimb/article/50/1/kuad001/6986259" target="_blank" rel="noopener">Oxford Academic</a>
+            </div>
+          </div>
+          <div class="source">
+            <h4>Revisiones sobre High Gravity / Very High Gravity</h4>
+            <p>Marco general de desafíos de VHG, transferencia de masa, estrés osmótico y limitaciones de proceso en bioetanol de maíz.</p>
+            <div class="links">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148118307146" target="_blank" rel="noopener">Renewable & Sustainable Energy Reviews</a>
+              <a href="https://www.mdpi.com/2311-5637/7/1/38" target="_blank" rel="noopener">Fermentation (MDPI)</a>
+            </div>
+          </div>
+          <div class="source">
+            <h4>Fuentes económicas y de seguridad</h4>
+            <p>Precio oficial del bioetanol de maíz, referencia cambiaria y marco general para equipos en atmósferas potencialmente explosivas.</p>
+            <div class="links">
+              <a href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-25-2026-422866/texto" target="_blank" rel="noopener">Resolución 25/2026 · Secretaría de Energía</a>
+              <a href="https://www.bna.com.ar/" target="_blank" rel="noopener">Banco Nación Argentina</a>
+              <a href="https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/equipment-potentially-explosive-atmospheres-atex_en" target="_blank" rel="noopener">ATEX · European Commission</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="footer wrap" style="padding-left:0; padding-right:0;">
+        Documento HTML simplificado para presentación ejecutiva. Alcance restringido al caso 1.05 → 1.00 atm abs.
+        Los beneficios económicos son brutos y no descuentan OPEX incremental, pérdidas por condensado ni CAPEX del sistema de extracción.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
