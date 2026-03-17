@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fermentación VHG · Lectura honesta de la evidencia 1.05 a 1.00 atm abs</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fermentación VHG · Lectura honesta de la evidencia 1.05 a 1.00 atm abs</title>
+<style>
     :root{
       --bg:#f5f7f2;
       --ink:#18211d;
@@ -95,288 +96,323 @@
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="brand"><div class="logo-box"><img src="data:image/png;base64,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" alt="Bio4 Bioetanol Río Cuarto S.A." /></div></div>
-      <span class="badge">HTML ejecutivo · lectura honesta de la evidencia</span>
-      <div class="hero-grid">
-        <div>
-          <h1>Qué puede afirmarse y qué no sobre bajar la presión de 1.05 a 1.00 atm abs</h1>
-          <p>
+<header class="hero">
+<div class="wrap">
+<div class="brand"><div class="logo-box"><img alt="Bio4 Bioetanol Río Cuarto S.A." src="data:image/png;base64,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"/></div></div>
+<span class="badge">HTML ejecutivo · lectura honesta de la evidencia</span>
+<div class="hero-grid">
+<div>
+<h1>Qué puede afirmarse y qué no sobre bajar la presión de 1.05 a 1.00 atm abs</h1>
+<p>
             Este HTML fue reordenado para que la lectura sea clara frente a producción: separa lo que está <strong>demostrado por la bibliografía</strong>,
             lo que es <strong>indirecto pero consistente</strong>, y lo que sigue siendo un <strong>supuesto de ingeniería</strong> para el caso Bio4.
             Integra el paper completo cargado como <em>Datos 1.pdf</em> y el informe interno <em>Quantifying the Inhibitory Effects of Hyperbaric CO₂ and Hydrostatic Gradients on Saccharomyces cerevisiae in High-Gravity Corn Mash Fermentation</em>.
           </p>
+</div>
+<aside class="hero-side">
+<h3>Datos base del caso Bio4</h3>
+<div class="mini">
+<div><span>Altura del fermentador</span><strong>15 m</strong></div>
+<div><span>Producción base</span><strong>500.000 L/día</strong></div>
+<div><span>Densidad del mosto</span><strong>1080–1120 kg/m³</strong></div>
+<div><span>Cabezal actual</span><strong>1.05 atm abs</strong></div>
+<div><span>Cabezal objetivo</span><strong>1.00 atm abs</strong></div>
+<div><span>Ganancia usada al final</span><strong>0,18%–0,25%</strong></div>
+<div><span>Precio bioetanol</span><strong>ARS 917,323/L</strong></div>
+<div><span>Tipo de cambio</span><strong>ARS 1415/USD</strong></div>
+</div>
+</aside>
+</div>
+</div>
+</header>
+<main class="wrap">
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>1. Respuesta corta para la reunión</h2></div>
+<p>La forma más sólida de presentarlo es distinguir entre evidencia directa, evidencia indirecta y extrapolación al caso industrial de maíz VHG.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="label">Lo más fuerte</div>
+<div class="value">Sí</div>
+<div class="sub">Hay evidencia experimental directa de que <span class="kpi">bajar la presión y el CO₂ disuelto</span> puede aumentar la velocidad de fermentación y el etanol final. El paper más fuerte para esto es <strong>Guadalupe-Daqui et al. (2023)</strong>.</div>
+</div>
+<div class="card">
+<div class="label">Punto a corroborar en planta</div>
+<div class="value">Validar</div>
+<div class="sub">La bibliografía disponible no prueba de forma exacta que <span class="kpi">1.05 → 1.00 atm</span> en <strong>mosto de maíz VHG industrial</strong> mejore el etanol en un porcentaje determinado; ese impacto debe confirmarse experimentalmente en planta.</div>
+</div>
+<div class="card">
+<div class="label">Qué sí está sustentado</div>
+<div class="value">CO₂ ↓</div>
+<div class="sub">La bibliografía sí respalda que <span class="kpi">menor CO₂ disuelto</span> mejora el entorno fisiológico, el uptake de nutrientes y el desempeño fermentativo, aunque no siempre mida etanol final en un sistema igual al de Bio4.</div>
+</div>
+<div class="card">
+<div class="label">Cómo presentarlo</div>
+<div class="value">Supuesto</div>
+<div class="sub">Para Bio4, la mejora de <span class="kpi">0,18%–0,25%</span> debe mostrarse como <strong>supuesto de ingeniería razonable</strong>, consistente con el mecanismo y pendiente de validación en planta.</div>
+</div>
+</div>
+<div class="notice" style="margin-top:18px;">
+<strong>Cómo suma el review “Process intensification in bioethanol fermentation”:</strong>
+  no aporta una demostración exacta para <strong>1.05 → 1.00 atm abs</strong>, pero sí refuerza el mecanismo que interesa en Bio4: <strong>menor presión → menor CO₂ disuelto → menor estrés fisiológico</strong>. El review resume estudios donde la remoción parcial de CO₂ bajo vacío se asoció con <strong>+8% de consumo de azúcar</strong>, <strong>+8% promedio de tasa fermentativa</strong>, <strong>picos de +26%</strong> y <strong>+5% de bioetanol</strong>; además cita mejoras de <strong>viabilidad de 91,2% a 97,5%</strong> y un antecedente en <strong>maíz</strong> a <strong>0,94 bar</strong>, <strong>450 g/L</strong> y <strong>32°C</strong> con aumento de producción de hasta <strong>30%</strong>. En este HTML se usa ese paper como <strong>respaldo del mecanismo y del diseño del piloto</strong>, no como prueba directa del porcentaje esperado en Bio4.
+</div>
+<div class="notice" style="margin-top:18px;">
+<strong>Frase segura:</strong> “La literatura sí muestra que reducir el CO₂ disuelto puede acelerar la fermentación y, en algunos sistemas bajo vacío, aumentar el etanol final. Para nuestro caso puntual de 1.05 a 1.00 atm en maíz VHG, el mecanismo está bien sustentado, pero la magnitud exacta debe validarse en planta”.
         </div>
-        <aside class="hero-side">
-          <h3>Datos base del caso Bio4</h3>
-          <div class="mini">
-            <div><span>Altura del fermentador</span><strong>15 m</strong></div>
-            <div><span>Producción base</span><strong>500.000 L/día</strong></div>
-            <div><span>Densidad del mosto</span><strong>1080–1120 kg/m³</strong></div>
-            <div><span>Cabezal actual</span><strong>1.05 atm abs</strong></div>
-            <div><span>Cabezal objetivo</span><strong>1.00 atm abs</strong></div>
-            <div><span>Ganancia usada al final</span><strong>0,18%–0,25%</strong></div>
-            <div><span>Precio bioetanol</span><strong>ARS 917,323/L</strong></div>
-            <div><span>Tipo de cambio</span><strong>ARS 1415/USD</strong></div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="section">
-      <div class="panel">
-        <div class="section-title">
-          <div><h2>1. Respuesta corta para la reunión</h2></div>
-          <p>La forma más sólida de presentarlo es distinguir entre evidencia directa, evidencia indirecta y extrapolación al caso industrial de maíz VHG.</p>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>2. Qué dicen realmente los trabajos</h2></div>
+<p>Tabla corta para responder dudas rápidas sin sobreprometer.</p>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Trabajo</th>
+<th>Qué ensayó</th>
+<th>¿Mide más etanol?</th>
+<th>Valor para Bio4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guadalupe-Daqui et al. (2023)</strong></td>
+<td>Batch HG cervecero con vacío parcial vs atmosférico</td>
+<td><strong>Sí.</strong> Etanol final ~5% mayor bajo vacío</td>
+<td>Es la mejor prueba de concepto de esta bibliografía</td>
+</tr><tr>
+<td><strong>Kanani et al. (2026) · Review de intensificación</strong></td>
+<td>Review sobre vacuum fermentation y remoción in-situ de inhibidores</td>
+<td><strong>Indirecto / parcial.</strong> Resume estudios con +5% de bioetanol por menor CO₂ y cita un caso en maíz con hasta +30% bajo vacío, pero no es un ensayo único en Bio4</td>
+<td>Muy útil para justificar el <strong>piloto</strong>, ordenar variables a medir y mostrar que el CO₂ disuelto es un limitante real</td>
+</tr>
+<tr>
+<td><strong>Cysewski &amp; Wilke (1977)</strong></td>
+<td>Fermentación continua con vacío y cell recycle</td>
+<td><strong>Sí.</strong> Productividad de etanol muy superior bajo vacío</td>
+<td>Apoya el principio, pero el mecanismo incluye remoción de etanol</td>
+</tr>
+<tr>
+<td><strong>Ramalingham &amp; Finn (1977)</strong></td>
+<td>Concepto Vacuferm en melaza clarificada</td>
+<td><strong>Indirecto/directo de proceso.</strong> Más azúcar en menos tiempo relativo</td>
+<td>Sirve a nivel proceso, no para cuantificar 1.05 → 1.00</td>
+</tr>
+<tr>
+<td><strong>Knatchbull &amp; Slaughter (1987)</strong></td>
+<td>Fermentación de wort bajo 0,5 y 1,0 atm de CO₂</td>
+<td><strong>No directamente.</strong> La velocidad cambia poco</td>
+<td>Importante para uptake de aminoácidos y perfil metabólico</td>
+</tr>
+<tr>
+<td><strong>Aguilera et al. (2005)</strong></td>
+<td>Chemostats de S. cerevisiae con alto CO₂</td>
+<td><strong>No.</strong> Mide biomasa y respuesta transcriptómica</td>
+<td>Muy útil para el mecanismo de estrés, no para etanol final</td>
+</tr>
+<tr>
+<td><strong>Puligundla 2019 / Gomes 2021</strong></td>
+<td>Reviews HG/VHG</td>
+<td><strong>No.</strong> Dan contexto, no prueban este efecto</td>
+<td>Sirven para enmarcar VHG y sus limitaciones</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pill amber">Conclusión práctica: la evidencia más directa de “más etanol” está en vacío parcial; para 1.05 → 1.00 atm en maíz VHG la mejora sigue siendo una extrapolación.</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>3. Condiciones experimentales relevantes que conviene recordar</h2></div>
+<p>Esta sección te ayuda a no mezclar trabajos que estudian mecanismos diferentes o medios diferentes al de Bio4.</p>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Trabajo</th>
+<th>Levadura / sistema</th>
+<th>Medio / operación</th>
+<th>Hallazgo útil</th>
+<th>Límite para extrapolar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guadalupe-Daqui et al. (2023)</strong></td>
+<td><strong>Saccharomyces pastorianus</strong>, ADY “Diamond Lager yeast”</td>
+<td>5 L kegs, 4 L de medio HG 15% w/w, 13°C, duplicados, vacío parcial <strong>24,1 ± 3,5 kPa</strong> vs control atmosférico, vacío aplicado 12 h después del pitching, condensadores a 5°C</td>
+<td>CO₂ disuelto ~4 veces menor, +50% células en suspensión, +26% pico de tasa fermentativa, +8% azúcar consumida, +5% etanol final, +27% glicerol, −59% trehalosa</td>
+<td>No es maíz VHG industrial ni un salto pequeño de presión</td>
+</tr><tr>
+<td><strong>Kanani et al. (2026) · Review de intensificación</strong></td>
+<td><strong>No es un ensayo único</strong>; compila múltiples trabajos con <strong>Saccharomyces cerevisiae</strong> en distintos sustratos y presiones reducidas</td>
+<td>Resume, entre otros, un antecedente en <strong>corn</strong> con <strong>S. cerevisiae</strong>, <strong>0,94 bar</strong>, <strong>450 g/L</strong> y <strong>32°C</strong>; también resume estudios donde la baja de presión redujo CO₂ disuelto y mejoró cinética</td>
+<td>Sirve para mostrar que el problema no es solo el etanol: el <strong>CO₂ disuelto</strong> también aparece como inhibidor relevante y que bajo menor presión pueden mejorar viabilidad, azúcar consumida y tasa fermentativa</td>
+<td>Como review, mezcla casos con <strong>remoción de etanol</strong>, vacío más agresivo y sustratos distintos; no fija el efecto exacto esperable para 1.05 → 1.00 atm en maíz VHG industrial</td>
+</tr>
+<tr>
+<td><strong>Cysewski &amp; Wilke (1977)</strong></td>
+<td><strong>Saccharomyces cerevisiae</strong> ATCC 4126</td>
+<td>Fermentación continua a 35°C, con vacío y cell recycle; a 50 mmHg y 33,4% glucosa</td>
+<td>Productividades de etanol muy superiores frente a procesos convencionales</td>
+<td>El beneficio combina vacío + remoción de etanol + cell recycle; no es un caso comparable 1:1 con Bio4</td>
+</tr>
+<tr>
+<td><strong>Ramalingham &amp; Finn (1977)</strong></td>
+<td>Proceso Vacuferm con melaza clarificada y crema de levadura reciclada</td>
+<td>Fermentación continua bajo vacío</td>
+<td>Plantea 3 veces más concentración de azúcar fermentada en solo un tercio más de tiempo y ahorro térmico de ~7%</td>
+<td>Es una referencia de proceso histórico, no una validación del caso 1.05 → 1.00 atm</td>
+</tr>
+<tr>
+<td><strong>Knatchbull &amp; Slaughter (1987)</strong></td>
+<td>Levadura cervecera en wort</td>
+<td>Fermentaciones de laboratorio a 0,5 y 1,0 atm de CO₂</td>
+<td>La velocidad de fermentación cambia poco, pero empeora la absorción de aminoácidos ramificados y cambia el perfil de volátiles</td>
+<td>Muy útil para mecanismo de nutrientes; no prueba más etanol final</td>
+</tr>
+<tr>
+<td><strong>Aguilera et al. (2005)</strong></td>
+<td><strong>Saccharomyces cerevisiae</strong> en chemostat limitado por glucosa</td>
+<td>Condiciones anaeróbicas con CO₂ saturado y condiciones aeróbicas con 79% CO₂ / 21% O₂</td>
+<td>En anaerobiosis el efecto sobre biomasa fue marginal (&lt;10%); en aerobiosis la biomasa cayó ~25%</td>
+<td>Demuestra sensibilidad fisiológica al CO₂, pero no aumento de etanol por menor presión</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="notice warn" style="margin-top:18px;">
+<strong>Punto fino importante:</strong> el mejor paper para hablar de “más etanol” no está en maíz VHG sino en un sistema HG cervecero. Eso no invalida el mecanismo, pero sí obliga a presentar el caso Bio4 como una extrapolación prudente y no como una verdad ya publicada para este proceso exacto.
         </div>
-        <div class="cards">
-          <div class="card">
-            <div class="label">Lo más fuerte</div>
-            <div class="value">Sí</div>
-            <div class="sub">Hay evidencia experimental directa de que <span class="kpi">bajar la presión y el CO₂ disuelto</span> puede aumentar la velocidad de fermentación y el etanol final. El paper más fuerte para esto es <strong>Guadalupe-Daqui et al. (2023)</strong>.</div>
-          </div>
-          <div class="card">
-            <div class="label">Punto a corroborar en planta</div>
-            <div class="value">Validar</div>
-            <div class="sub">La bibliografía disponible no prueba de forma exacta que <span class="kpi">1.05 → 1.00 atm</span> en <strong>mosto de maíz VHG industrial</strong> mejore el etanol en un porcentaje determinado; ese impacto debe confirmarse experimentalmente en planta.</div>
-          </div>
-          <div class="card">
-            <div class="label">Qué sí está sustentado</div>
-            <div class="value">CO₂ ↓</div>
-            <div class="sub">La bibliografía sí respalda que <span class="kpi">menor CO₂ disuelto</span> mejora el entorno fisiológico, el uptake de nutrientes y el desempeño fermentativo, aunque no siempre mida etanol final en un sistema igual al de Bio4.</div>
-          </div>
-          <div class="card">
-            <div class="label">Cómo presentarlo</div>
-            <div class="value">Supuesto</div>
-            <div class="sub">Para Bio4, la mejora de <span class="kpi">0,18%–0,25%</span> debe mostrarse como <strong>supuesto de ingeniería razonable</strong>, consistente con el mecanismo y pendiente de validación en planta.</div>
-          </div>
-        </div>
-        <div class="notice" style="margin-top:18px;">
-          <strong>Frase segura:</strong> “La literatura sí muestra que reducir el CO₂ disuelto puede acelerar la fermentación y, en algunos sistemas bajo vacío, aumentar el etanol final. Para nuestro caso puntual de 1.05 a 1.00 atm en maíz VHG, el mecanismo está bien sustentado, pero la magnitud exacta debe validarse en planta”.
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="panel">
-        <div class="section-title">
-          <div><h2>2. Qué dicen realmente los trabajos</h2></div>
-          <p>Tabla corta para responder dudas rápidas sin sobreprometer.</p>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Trabajo</th>
-                <th>Qué ensayó</th>
-                <th>¿Mide más etanol?</th>
-                <th>Valor para Bio4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Guadalupe-Daqui et al. (2023)</strong></td>
-                <td>Batch HG cervecero con vacío parcial vs atmosférico</td>
-                <td><strong>Sí.</strong> Etanol final ~5% mayor bajo vacío</td>
-                <td>Es la mejor prueba de concepto de esta bibliografía</td>
-              </tr>
-              <tr>
-                <td><strong>Cysewski & Wilke (1977)</strong></td>
-                <td>Fermentación continua con vacío y cell recycle</td>
-                <td><strong>Sí.</strong> Productividad de etanol muy superior bajo vacío</td>
-                <td>Apoya el principio, pero el mecanismo incluye remoción de etanol</td>
-              </tr>
-              <tr>
-                <td><strong>Ramalingham & Finn (1977)</strong></td>
-                <td>Concepto Vacuferm en melaza clarificada</td>
-                <td><strong>Indirecto/directo de proceso.</strong> Más azúcar en menos tiempo relativo</td>
-                <td>Sirve a nivel proceso, no para cuantificar 1.05 → 1.00</td>
-              </tr>
-              <tr>
-                <td><strong>Knatchbull & Slaughter (1987)</strong></td>
-                <td>Fermentación de wort bajo 0,5 y 1,0 atm de CO₂</td>
-                <td><strong>No directamente.</strong> La velocidad cambia poco</td>
-                <td>Importante para uptake de aminoácidos y perfil metabólico</td>
-              </tr>
-              <tr>
-                <td><strong>Aguilera et al. (2005)</strong></td>
-                <td>Chemostats de S. cerevisiae con alto CO₂</td>
-                <td><strong>No.</strong> Mide biomasa y respuesta transcriptómica</td>
-                <td>Muy útil para el mecanismo de estrés, no para etanol final</td>
-              </tr>
-              <tr>
-                <td><strong>Puligundla 2019 / Gomes 2021</strong></td>
-                <td>Reviews HG/VHG</td>
-                <td><strong>No.</strong> Dan contexto, no prueban este efecto</td>
-                <td>Sirven para enmarcar VHG y sus limitaciones</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="pill amber">Conclusión práctica: la evidencia más directa de “más etanol” está en vacío parcial; para 1.05 → 1.00 atm en maíz VHG la mejora sigue siendo una extrapolación.</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="panel">
-        <div class="section-title">
-          <div><h2>3. Condiciones experimentales relevantes que conviene recordar</h2></div>
-          <p>Esta sección te ayuda a no mezclar trabajos que estudian mecanismos diferentes o medios diferentes al de Bio4.</p>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Trabajo</th>
-                <th>Levadura / sistema</th>
-                <th>Medio / operación</th>
-                <th>Hallazgo útil</th>
-                <th>Límite para extrapolar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Guadalupe-Daqui et al. (2023)</strong></td>
-                <td><strong>Saccharomyces pastorianus</strong>, ADY “Diamond Lager yeast”</td>
-                <td>5 L kegs, 4 L de medio HG 15% w/w, 13°C, duplicados, vacío parcial <strong>24,1 ± 3,5 kPa</strong> vs control atmosférico, vacío aplicado 12 h después del pitching, condensadores a 5°C</td>
-                <td>CO₂ disuelto ~4 veces menor, +50% células en suspensión, +26% pico de tasa fermentativa, +8% azúcar consumida, +5% etanol final, +27% glicerol, −59% trehalosa</td>
-                <td>No es maíz VHG industrial ni un salto pequeño de presión</td>
-              </tr>
-              <tr>
-                <td><strong>Cysewski & Wilke (1977)</strong></td>
-                <td><strong>Saccharomyces cerevisiae</strong> ATCC 4126</td>
-                <td>Fermentación continua a 35°C, con vacío y cell recycle; a 50 mmHg y 33,4% glucosa</td>
-                <td>Productividades de etanol muy superiores frente a procesos convencionales</td>
-                <td>El beneficio combina vacío + remoción de etanol + cell recycle; no es un caso comparable 1:1 con Bio4</td>
-              </tr>
-              <tr>
-                <td><strong>Ramalingham & Finn (1977)</strong></td>
-                <td>Proceso Vacuferm con melaza clarificada y crema de levadura reciclada</td>
-                <td>Fermentación continua bajo vacío</td>
-                <td>Plantea 3 veces más concentración de azúcar fermentada en solo un tercio más de tiempo y ahorro térmico de ~7%</td>
-                <td>Es una referencia de proceso histórico, no una validación del caso 1.05 → 1.00 atm</td>
-              </tr>
-              <tr>
-                <td><strong>Knatchbull & Slaughter (1987)</strong></td>
-                <td>Levadura cervecera en wort</td>
-                <td>Fermentaciones de laboratorio a 0,5 y 1,0 atm de CO₂</td>
-                <td>La velocidad de fermentación cambia poco, pero empeora la absorción de aminoácidos ramificados y cambia el perfil de volátiles</td>
-                <td>Muy útil para mecanismo de nutrientes; no prueba más etanol final</td>
-              </tr>
-              <tr>
-                <td><strong>Aguilera et al. (2005)</strong></td>
-                <td><strong>Saccharomyces cerevisiae</strong> en chemostat limitado por glucosa</td>
-                <td>Condiciones anaeróbicas con CO₂ saturado y condiciones aeróbicas con 79% CO₂ / 21% O₂</td>
-                <td>En anaerobiosis el efecto sobre biomasa fue marginal (&lt;10%); en aerobiosis la biomasa cayó ~25%</td>
-                <td>Demuestra sensibilidad fisiológica al CO₂, pero no aumento de etanol por menor presión</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="notice warn" style="margin-top:18px;">
-          <strong>Punto fino importante:</strong> el mejor paper para hablar de “más etanol” no está en maíz VHG sino en un sistema HG cervecero. Eso no invalida el mecanismo, pero sí obliga a presentar el caso Bio4 como una extrapolación prudente y no como una verdad ya publicada para este proceso exacto.
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="two">
-        <div class="panel chart">
-          <h3>4. Perfil de presión del caso Bio4</h3>
-          <p>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>4. Cómo ayuda el review “Process intensification in bioethanol fermentation”</h2></div>
+<p>Esta sección baja a lenguaje de reunión qué suma ese paper nuevo y hasta dónde conviene usarlo sin sobreprometer.</p>
+</div>
+<div class="two">
+<div class="panel" style="padding:22px; background:var(--soft); border:1px solid var(--line); box-shadow:none;">
+<h3 style="margin:0 0 10px; font-size:18px;">Lo que sí aporta a esta investigación</h3>
+<ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.7;">
+<li>Refuerza que el <strong>CO₂ disuelto</strong> es un inhibidor operativo relevante, junto con el etanol.</li>
+<li>Resume resultados donde una menor presión o vacío parcial se asoció con <strong>+8% de consumo de azúcar</strong>, <strong>+8% promedio de tasa fermentativa</strong>, <strong>picos de +26%</strong> y <strong>+5% de bioetanol</strong>.</li>
+<li>Aporta indicadores biológicos útiles para el piloto: <strong>viabilidad</strong>, <strong>células en suspensión</strong>, <strong>trehalosa</strong>, <strong>glicerol</strong> y consumo de sustrato.</li>
+<li>Cita un antecedente en <strong>maíz</strong> con <strong>S. cerevisiae</strong>, <strong>0,94 bar</strong>, <strong>450 g/L</strong> y <strong>32°C</strong>, con aumento de producción de hasta <strong>30%</strong> bajo vacío.</li>
+<li>Ordena riesgos de implementación: <strong>espuma</strong>, <strong>condensación</strong>, <strong>pérdidas de etanol</strong>, monitoreo de presión y necesidad de operación estable.</li>
+</ul>
+</div>
+<div class="panel" style="padding:22px; background:#fffdf8; border:1px solid #eadfbe; box-shadow:none;">
+<h3 style="margin:0 0 10px; font-size:18px;">Cómo conviene usarlo frente a Bio4</h3>
+<ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.7;">
+<li>Como <strong>respaldo del mecanismo</strong>: menor presión puede aliviar a la levadura al bajar el CO₂ disuelto.</li>
+<li>Como <strong>justificación del piloto</strong>: vale la pena medir si ese alivio mejora etanol neto, productividad y azúcar residual.</li>
+<li>Como <strong>fuente de variables a monitorear</strong>: viabilidad, trehalosa, glicerol, CO₂ disuelto o proxy, espuma y condensados.</li>
+<li><strong>No</strong> conviene usarlo como prueba cerrada de que <strong>1.05 → 1.00 atm</strong> dará un porcentaje exacto de mejora en Bio4, porque el review mezcla sustratos, presiones más bajas y casos con remoción real de etanol.</li>
+<li>La lectura correcta es: <strong>el mecanismo está bien sustentado; el impacto cuantitativo exacto en Bio4 sigue siendo un supuesto de ingeniería a validar</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="notice" style="margin-top:18px;"><strong>Lectura ejecutiva del review:</strong> ayuda mucho a explicar <strong>por qué un pequeño alivio barométrico puede valer la pena ensayarse</strong>, pero no reemplaza la validación en planta. En este HTML, el review cargado <strong>“Process intensification in bioethanol fermentation”</strong> se lee junto con el informe cargado <strong>“Quantifying the Inhibitory Effects of Hyperbaric CO₂ and Hydrostatic Gradients...”</strong>: uno refuerza el <strong>mecanismo fisiológico y los antecedentes de vacío</strong>, y el otro refuerza la <strong>lectura hidrostática y de CO₂ disuelto en fermentadores altos</strong>.</div>
+</div>
+</section>
+<section class="section">
+<div class="two">
+<div class="panel chart">
+<h3>4. Perfil de presión del caso Bio4</h3>
+<p>
             El alivio absoluto del cabezal es de solo 0,05 atm, pero el tanque de 15 m sigue operando con una base de aproximadamente 2,6 atm abs.
             Por eso la mejora esperable es modesta y debe interpretarse como una reducción pequeña pero sostenida del equilibrio de CO₂ disuelto.
           </p>
-          <div class="chart-frame">
-<svg viewBox="0 0 760 360" width="100%" role="img" aria-label="Perfil de presión 1.05 vs 1.00 atm">
-  <rect x="0" y="0" width="760" height="360" fill="#ffffff"/>
-  <line x1="90" y1="28" x2="90" y2="308" stroke="#c8d0cb" stroke-width="1.2"/>
-  <line x1="90" y1="308" x2="710" y2="308" stroke="#c8d0cb" stroke-width="1.2"/>
-  <text x="26" y="33" font-size="12" fill="#6b756d">atm abs</text>
-  <text x="678" y="338" font-size="12" fill="#6b756d">altura</text>
-
-  <line x1="90" y1="248" x2="710" y2="248" stroke="#eef2ed"/>
-  <line x1="90" y1="178" x2="710" y2="178" stroke="#eef2ed"/>
-  <line x1="90" y1="108" x2="710" y2="108" stroke="#eef2ed"/>
-  <text x="52" y="252" font-size="12" fill="#6b756d">1.2</text>
-  <text x="52" y="182" font-size="12" fill="#6b756d">1.8</text>
-  <text x="52" y="112" font-size="12" fill="#6b756d">2.4</text>
-  <text x="52" y="42" font-size="12" fill="#6b756d">3.0</text>
-
-  <text x="115" y="330" font-size="12" fill="#6b756d">Superficie</text>
-  <text x="360" y="330" font-size="12" fill="#6b756d">Mitad</text>
-  <text x="620" y="330" font-size="12" fill="#6b756d">Fondo</text>
-
-  <polyline fill="none" stroke="#84b51d" stroke-width="5" points="150,266 395,177 640,84"/>
-  <circle cx="150" cy="266" r="5.5" fill="#84b51d"/>
-  <circle cx="395" cy="177" r="5.5" fill="#84b51d"/>
-  <circle cx="640" cy="84" r="5.5" fill="#84b51d"/>
-
-  <polyline fill="none" stroke="#506070" stroke-width="5" points="150,272 395,184 640,90"/>
-  <circle cx="150" cy="272" r="5.5" fill="#506070"/>
-  <circle cx="395" cy="184" r="5.5" fill="#506070"/>
-  <circle cx="640" cy="90" r="5.5" fill="#506070"/>
-
-  <text x="162" y="260" font-size="12" fill="#54710f">1.05</text>
-  <text x="407" y="171" font-size="12" fill="#54710f">1.85</text>
-  <text x="652" y="78" font-size="12" fill="#54710f">2.65</text>
-
-  <text x="162" y="288" font-size="12" fill="#506070">1.00</text>
-  <text x="407" y="198" font-size="12" fill="#506070">1.80</text>
-  <text x="652" y="104" font-size="12" fill="#506070">2.60</text>
+<div class="chart-frame">
+<svg aria-label="Perfil de presión 1.05 vs 1.00 atm" role="img" viewbox="0 0 760 360" width="100%">
+<rect fill="#ffffff" height="360" width="760" x="0" y="0"></rect>
+<line stroke="#c8d0cb" stroke-width="1.2" x1="90" x2="90" y1="28" y2="308"></line>
+<line stroke="#c8d0cb" stroke-width="1.2" x1="90" x2="710" y1="308" y2="308"></line>
+<text fill="#6b756d" font-size="12" x="26" y="33">atm abs</text>
+<text fill="#6b756d" font-size="12" x="678" y="338">altura</text>
+<line stroke="#eef2ed" x1="90" x2="710" y1="248" y2="248"></line>
+<line stroke="#eef2ed" x1="90" x2="710" y1="178" y2="178"></line>
+<line stroke="#eef2ed" x1="90" x2="710" y1="108" y2="108"></line>
+<text fill="#6b756d" font-size="12" x="52" y="252">1.2</text>
+<text fill="#6b756d" font-size="12" x="52" y="182">1.8</text>
+<text fill="#6b756d" font-size="12" x="52" y="112">2.4</text>
+<text fill="#6b756d" font-size="12" x="52" y="42">3.0</text>
+<text fill="#6b756d" font-size="12" x="115" y="330">Superficie</text>
+<text fill="#6b756d" font-size="12" x="360" y="330">Mitad</text>
+<text fill="#6b756d" font-size="12" x="620" y="330">Fondo</text>
+<polyline fill="none" points="150,266 395,177 640,84" stroke="#84b51d" stroke-width="5"></polyline>
+<circle cx="150" cy="266" fill="#84b51d" r="5.5"></circle>
+<circle cx="395" cy="177" fill="#84b51d" r="5.5"></circle>
+<circle cx="640" cy="84" fill="#84b51d" r="5.5"></circle>
+<polyline fill="none" points="150,272 395,184 640,90" stroke="#506070" stroke-width="5"></polyline>
+<circle cx="150" cy="272" fill="#506070" r="5.5"></circle>
+<circle cx="395" cy="184" fill="#506070" r="5.5"></circle>
+<circle cx="640" cy="90" fill="#506070" r="5.5"></circle>
+<text fill="#54710f" font-size="12" x="162" y="260">1.05</text>
+<text fill="#54710f" font-size="12" x="407" y="171">1.85</text>
+<text fill="#54710f" font-size="12" x="652" y="78">2.65</text>
+<text fill="#506070" font-size="12" x="162" y="288">1.00</text>
+<text fill="#506070" font-size="12" x="407" y="198">1.80</text>
+<text fill="#506070" font-size="12" x="652" y="104">2.60</text>
 </svg>
 </div>
-          <div class="pill green">El efecto relativo es mayor arriba que abajo, pero la mitad inferior sigue siendo la zona más castigada por presión y CO₂.</div>
-        </div>
-        <div class="panel">
-          <div class="section-title">
-            <div><h2>5. Traducción al caso Bio4</h2></div>
-            <p>Qué está apoyado por literatura y qué entra como hipótesis de trabajo para la planta.</p>
-          </div>
-          <div class="three">
-            <div class="card">
-              <div class="label">Sustentado</div>
-              <div class="sub">
+<div class="pill green">El efecto relativo es mayor arriba que abajo, pero la mitad inferior sigue siendo la zona más castigada por presión y CO₂.</div>
+</div>
+<div class="panel">
+<div class="section-title">
+<div><h2>5. Traducción al caso Bio4</h2></div>
+<p>Qué está apoyado por literatura y qué entra como hipótesis de trabajo para la planta.</p>
+</div>
+<div class="three">
+<div class="card">
+<div class="label">Sustentado</div>
+<div class="sub">
                 Menor presión total o menor CO₂ en cabeza <strong>reduce la solubilidad del CO₂</strong>, mejora el entorno de la levadura
                 y puede acelerar la fermentación. Esto está bien respaldado por Guadalupe-Daqui y por la bibliografía fisiológica.
               </div>
-            </div>
-            <div class="card">
-              <div class="label">Consistente pero indirecto</div>
-              <div class="sub">
+</div>
+<div class="card">
+<div class="label">Consistente pero indirecto</div>
+<div class="sub">
                 Que una baja chica de presión ayude al rendimiento porque libera parcialmente un volumen de levadura que estaba operando cerca del umbral inhibitorio por CO₂.
                 Esta lectura es coherente con Henry, con uptake de FAN y con estrés por trehalosa.
               </div>
-            </div>
-            <div class="card">
-              <div class="label">No demostrado todavía</div>
-              <div class="sub">
+</div>
+<div class="card">
+<div class="label">No demostrado todavía</div>
+<div class="sub">
                 Que <strong>1.05 → 1.00 atm</strong> en maíz VHG industrial produzca exactamente <strong>0,18%–0,25%</strong> más etanol.
                 Ese número hay que dejarlo explícitamente como supuesto de ingeniería.
               </div>
-            </div>
-          </div>
-          <ul class="clean">
-            <li><strong>Reducción relativa del equilibrio de CO₂:</strong> ~4,76% en superficie, ~2,68%–2,73% a media altura y ~1,87%–1,91% en el fondo.</li>
-            <li><strong>Lectura conservadora:</strong> la baja de presión es pequeña; por eso el rango de mejora propuesto al final también es pequeño.</li>
-            <li><strong>Lectura operativa:</strong> si el cuello de botella dominante fuera espuma, mezcla, nutrientes, temperatura o reología, el efecto real puede ser menor que el supuesto.</li>
-          </ul>
-          <div class="pill red">Presentación sugerida: el mecanismo está sólidamente respaldado por la bibliografía, mientras que el rango de mejora para Bio4 debe tratarse como una hipótesis de ingeniería a corroborar en campaña piloto.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="two">
-        <div class="panel">
-          <div class="section-title">
-            <div><h2>6. Ecuaciones citadas en los papers</h2></div>
-            <p>Acá se separan las ecuaciones realmente usadas en la bibliografía de las ecuaciones de ingeniería aplicadas al caso Bio4.</p>
-          </div>
-          <div class="eq">[Guadalupe-Daqui et al., 2023] · Ecuación empírica de fermentación de Balling
+</div>
+</div>
+<ul class="clean">
+<li><strong>Reducción relativa del equilibrio de CO₂:</strong> ~4,76% en superficie, ~2,68%–2,73% a media altura y ~1,87%–1,91% en el fondo.</li>
+<li><strong>Lectura conservadora:</strong> la baja de presión es pequeña; por eso el rango de mejora propuesto al final también es pequeño.</li>
+<li><strong>Lectura operativa:</strong> si el cuello de botella dominante fuera espuma, mezcla, nutrientes, temperatura o reología, el efecto real puede ser menor que el supuesto.</li>
+</ul>
+<div class="pill red">Presentación sugerida: el mecanismo está sólidamente respaldado por la bibliografía, mientras que el rango de mejora para Bio4 debe tratarse como una hipótesis de ingeniería a corroborar en campaña piloto.</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="two">
+<div class="panel">
+<div class="section-title">
+<div><h2>6. Ecuaciones citadas en los papers</h2></div>
+<p>Acá se separan las ecuaciones realmente usadas en la bibliografía de las ecuaciones de ingeniería aplicadas al caso Bio4.</p>
+</div>
+<div class="eq">[Guadalupe-Daqui et al., 2023] · Ecuación empírica de fermentación de Balling
 1000 g glucosa + 5 g FAN → 50 g biomasa + 488 g etanol + 468 g CO₂ + &lt;1 g otros productos
 
 Derivación usada en el paper:
@@ -396,16 +432,16 @@ Uso en el paper:
 ajustar azúcar, etanol, FAN, CO₂ y glicerol en función del tiempo.
 
 [Guadalupe-Daqui et al., 2023] · Correlación de solubilidad ζCO₂
-El paper también usa una correlación específica de solubilidad de CO₂ en cerveza (Speers & MacIntosh, 2013), dependiente de temperatura, azúcar, etanol y NaCl.
+El paper también usa una correlación específica de solubilidad de CO₂ en cerveza (Speers &amp; MacIntosh, 2013), dependiente de temperatura, azúcar, etanol y NaCl.
 Se menciona acá, pero no se reproduce completa para evitar copiarla de forma incompleta o incorrecta.</div>
-          <div class="pill blue">Estas ecuaciones sí pertenecen al marco cuantitativo del paper más importante del HTML.</div>
-        </div>
-        <div class="panel">
-          <div class="section-title">
-            <div><h2>7. Ecuaciones de ingeniería aplicadas a Bio4</h2></div>
-            <p>Estas no son “la prueba” del aumento de alcohol; son la herramienta para traducir el mecanismo al fermentador de 15 m.</p>
-          </div>
-          <div class="eq">[Aplicación al caso Bio4] · Presión hidrostática
+<div class="pill blue">Estas ecuaciones sí pertenecen al marco cuantitativo del paper más importante del HTML.</div>
+</div>
+<div class="panel">
+<div class="section-title">
+<div><h2>7. Ecuaciones de ingeniería aplicadas a Bio4</h2></div>
+<p>Estas no son “la prueba” del aumento de alcohol; son la herramienta para traducir el mecanismo al fermentador de 15 m.</p>
+</div>
+<div class="eq">[Aplicación al caso Bio4] · Presión hidrostática
 P(z) = P_cabezal + ρ·g·z
 
 [Aplicación al caso Bio4] · Cambio relativo de equilibrio de CO₂
@@ -416,169 +452,166 @@ Etanol adicional [L/día] = Producción base [L/día] × mejora relativa asumida
 
 [Aplicación al caso Bio4] · Beneficio económico
 Beneficio anual bruto = Etanol adicional anual × precio del bioetanol</div>
-          <ul class="clean">
-            <li>Con 15 m de altura y ρ = 1080–1120 kg/m³, el fondo pasa de aproximadamente <strong>2,62–2,68 atm</strong> a <strong>2,57–2,63 atm</strong>.</li>
-            <li>La caída de solubilidad esperable por Henry es real, pero pequeña; por eso el supuesto final también es pequeño.</li>
-            <li>El modelo de Luong puede usarse como sensibilidad conceptual, pero <strong>no fue la ecuación central de los papers citados en este HTML</strong>.</li>
-          </ul>
-          <div class="pill amber">Honestidad técnica: estas ecuaciones sostienen la inferencia Bio4, no reemplazan la validación de planta.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="panel">
-        <div class="section-title">
-          <div><h2>8. Supuesto de impacto para Bio4: 1.05 → 1.00 atm abs</h2></div>
-          <p>Esta es la parte que debe quedar expresamente marcada como <strong>supuesto de ingeniería</strong>, no como conclusión demostrada por la bibliografía.</p>
-        </div>
-        <div class="notice warn" style="margin-bottom:18px;">
-          <strong>Supuesto de trabajo:</strong> si el cuello de botella operativo relevante es el CO₂ disuelto y no otra variable dominante, una mejora global de producción de etanol del orden de <strong>0,18% a 0,25%</strong> es una hipótesis prudente y compatible con el mecanismo descrito por los papers. Ese rango necesita prueba piloto.
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Mejora asumida</th>
-                <th>Etanol adicional diario</th>
-                <th>Etanol adicional mensual</th>
-                <th>Etanol adicional anual</th>
-                <th>Beneficio bruto anual</th>
-                <th>Beneficio bruto anual USD</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>0,18%</td>
-                <td>900 L/día</td>
-                <td>27.000 L/mes</td>
-                <td>328.500 L/año</td>
-                <td>ARS 301.340.606</td>
-                <td>USD 212.962</td>
-              </tr>
-              <tr>
-                <td>0,25%</td>
-                <td>1.250 L/día</td>
-                <td>37.500 L/mes</td>
-                <td>456.250 L/año</td>
-                <td>ARS 418.528.619</td>
-                <td>USD 295.780</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="three" style="margin-top:16px;">
-          <div class="card">
-            <div class="label">Cómo defenderlo</div>
-            <div class="sub">“No estoy diciendo que 0,05 atm garantice esa mejora; estoy diciendo que el mecanismo permite esperar una mejora chica y medible, que vale la pena testear”.</div>
-          </div>
-          <div class="card">
-            <div class="label">Qué medir</div>
-            <div class="sub">dCO₂ o su proxy, presión real de cabezal, tiempo de batch, azúcar residual, etanol final, espuma, pérdidas por condensado/venteos y estabilidad operativa.</div>
-          </div>
-          <div class="card">
-            <div class="label">Criterio piloto</div>
-            <div class="sub">La hipótesis queda validada si la mejora neta de etanol supera el ruido normal de operación sin castigar espuma, seguridad ni pérdidas de alcohol por venteo.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="panel">
-        <div class="section-title">
-          <div><h2>9. Bibliografía y links ordenados por importancia para “más etanol”</h2></div>
-          <p>Los primeros links son los que más conviene abrir si en la reunión te piden “mostrar dónde está la base” para asociar menor presión / menor CO₂ con mejora fermentativa.</p>
-        </div>
-        <div class="sources">
-          <div class="source">
-            <h4>1) Guadalupe-Daqui et al. (2023) · el paper más importante para esta discusión</h4>
-            <p>
+<ul class="clean">
+<li>Con 15 m de altura y ρ = 1080–1120 kg/m³, el fondo pasa de aproximadamente <strong>2,62–2,68 atm</strong> a <strong>2,57–2,63 atm</strong>.</li>
+<li>La caída de solubilidad esperable por Henry es real, pero pequeña; por eso el supuesto final también es pequeño.</li>
+<li>El modelo de Luong puede usarse como sensibilidad conceptual, pero <strong>no fue la ecuación central de los papers citados en este HTML</strong>.</li>
+</ul>
+<div class="pill amber">Honestidad técnica: estas ecuaciones sostienen la inferencia Bio4, no reemplazan la validación de planta.</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>8. Supuesto de impacto para Bio4: 1.05 → 1.00 atm abs</h2></div>
+<p>Esta es la parte que debe quedar expresamente marcada como <strong>supuesto de ingeniería</strong>, no como conclusión demostrada por la bibliografía.</p>
+</div>
+<div class="notice warn" style="margin-bottom:18px;"><strong>Supuesto de trabajo:</strong> si el cuello de botella operativo relevante es el CO₂ disuelto y no otra variable dominante, una mejora global de producción de etanol del orden de <strong>0,18% a 0,25%</strong> es una hipótesis prudente y compatible con el mecanismo descrito por los papers, incluido el review de intensificación. <strong>No</strong> es un porcentaje demostrado en la bibliografía para el caso exacto Bio4; necesita prueba piloto.</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Mejora asumida</th>
+<th>Etanol adicional diario</th>
+<th>Etanol adicional mensual</th>
+<th>Etanol adicional anual</th>
+<th>Beneficio bruto anual</th>
+<th>Beneficio bruto anual USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0,18%</td>
+<td>900 L/día</td>
+<td>27.000 L/mes</td>
+<td>328.500 L/año</td>
+<td>ARS 301.340.606</td>
+<td>USD 212.962</td>
+</tr>
+<tr>
+<td>0,25%</td>
+<td>1.250 L/día</td>
+<td>37.500 L/mes</td>
+<td>456.250 L/año</td>
+<td>ARS 418.528.619</td>
+<td>USD 295.780</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="three" style="margin-top:16px;">
+<div class="card">
+<div class="label">Cómo defenderlo</div>
+<div class="sub">“No estoy diciendo que 0,05 atm garantice esa mejora; estoy diciendo que el mecanismo permite esperar una mejora chica y medible, que vale la pena testear”.</div>
+</div>
+<div class="card">
+<div class="label">Qué medir</div>
+<div class="sub">dCO₂ o su proxy, presión real de cabezal, tiempo de batch, azúcar residual, etanol final, espuma, pérdidas por condensado/venteos y estabilidad operativa.</div>
+</div>
+<div class="card">
+<div class="label">Criterio piloto</div>
+<div class="sub">La hipótesis queda validada si la mejora neta de etanol supera el ruido normal de operación sin castigar espuma, seguridad ni pérdidas de alcohol por venteo.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<div class="section-title">
+<div><h2>9. Bibliografía y links ordenados por importancia para “más etanol”</h2></div>
+<p>Los primeros links son los que más conviene abrir si en la reunión te piden “mostrar dónde está la base” para asociar menor presión / menor CO₂ con alivio fisiológico y posible mejora fermentativa, sin exagerar el alcance de la evidencia.</p>
+</div>
+<div class="sources">
+<div class="source">
+<h4>1) Guadalupe-Daqui et al. (2023) · el paper más importante para esta discusión</h4>
+<p>
               Es el mejor link del HTML para sostener explícitamente que al trabajar a menor presión / menor CO₂ disuelto se pueden obtener <strong>más células en suspensión, mayor tasa fermentativa y más etanol final</strong>.
               Ojo: el sistema es HG cervecero con <strong>S. pastorianus</strong>, no maíz VHG industrial.
             </p>
-            <div class="links">
-              <a href="https://academic.oup.com/jimb/article/50/1/kuad001/6986259" target="_blank" rel="noopener">Oxford Academic</a>
-              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10124126/" target="_blank" rel="noopener">PMC / full text</a>
-              <a href="Datos%201.pdf" target="_blank" rel="noopener">PDF cargado en esta sesión</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>2) Cysewski &amp; Wilke (1977) · apoyo directo, pero no equivalente al caso Bio4</h4>
-            <p>
+<div class="links">
+<a href="https://academic.oup.com/jimb/article/50/1/kuad001/6986259" rel="noopener" target="_blank">Oxford Academic</a>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10124126/" rel="noopener" target="_blank">PMC / full text</a>
+<a href="Datos%201.pdf" rel="noopener" target="_blank">PDF cargado en esta sesión</a>
+</div>
+</div><div class="source">
+<h4>2) Kanani et al. (2026) · review muy útil para justificar el piloto y el mecanismo</h4>
+<p>
+  No es la mejor evidencia directa de “más etanol” porque es un <strong>review</strong>, pero ayuda mucho a ordenar la discusión: plantea explícitamente que <strong>etanol y CO₂</strong> son inhibidores importantes, resume casos con mejoras de tasa y bioetanol bajo menor presión y cita un antecedente en <strong>maíz</strong>. Es especialmente útil para defender <strong>por qué tiene sentido probar</strong> una baja de presión aunque el porcentaje exacto para Bio4 todavía deba validarse.
+</p>
+<div class="links">
+<a href="https://www.sciencedirect.com/science/article/pii/S2352484725007462" rel="noopener" target="_blank">ScienceDirect</a>
+</div>
+</div>
+<div class="source">
+<h4>3) Cysewski &amp; Wilke (1977) · apoyo directo, pero no equivalente al caso Bio4</h4>
+<p>
               Sirve para mostrar que el vacío puede elevar muy fuerte la productividad de etanol. Hay que explicarlo con cuidado porque en este trabajo el beneficio incluye <strong>remoción de etanol como se forma</strong> y <strong>cell recycle</strong>, no solo menor CO₂ disuelto.
             </p>
-            <div class="links">
-              <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/bit.260190804" target="_blank" rel="noopener">Wiley</a>
-              <a href="https://escholarship.org/uc/item/6kv1z4nh" target="_blank" rel="noopener">eScholarship</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>3) Ramalingham &amp; Finn (1977) · referencia clásica de proceso</h4>
-            <p>
+<div class="links">
+<a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/bit.260190804" rel="noopener" target="_blank">Wiley</a>
+<a href="https://escholarship.org/uc/item/6kv1z4nh" rel="noopener" target="_blank">eScholarship</a>
+</div>
+</div>
+<div class="source">
+<h4>4) Ramalingham &amp; Finn (1977) · referencia clásica de proceso</h4>
+<p>
               Muy útil como antecedente histórico del enfoque Vacuferm. Da soporte de proceso y de economía térmica, pero no debe usarse para prometer el porcentaje de mejora del caso 1.05 → 1.00 atm.
             </p>
-            <div class="links">
-              <a href="https://www.osti.gov/biblio/6780716" target="_blank" rel="noopener">OSTI record</a>
-              <a href="https://doi.org/10.1002/bit.260190414" target="_blank" rel="noopener">DOI</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>4) Knatchbull &amp; Slaughter (1987) · mecanismo de nutrientes y volátiles</h4>
-            <p>
+<div class="links">
+<a href="https://www.osti.gov/biblio/6780716" rel="noopener" target="_blank">OSTI record</a>
+<a href="https://doi.org/10.1002/bit.260190414" rel="noopener" target="_blank">DOI</a>
+</div>
+</div>
+<div class="source">
+<h4>5) Knatchbull &amp; Slaughter (1987) · mecanismo de nutrientes y volátiles</h4>
+<p>
               No es el paper para prometer más alcohol. Sí es el paper para explicar por qué el CO₂ cambia el metabolismo: aminoácidos, volátiles y desempeño fisiológico.
             </p>
-            <div class="links">
-              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/j.2050-0416.1987.tb04530.x" target="_blank" rel="noopener">Wiley Online Library</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>5) Aguilera et al. (2005) · fisiología y transcriptómica bajo CO₂ alto</h4>
-            <p>
+<div class="links">
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/j.2050-0416.1987.tb04530.x" rel="noopener" target="_blank">Wiley Online Library</a>
+</div>
+</div>
+<div class="source">
+<h4>6) Aguilera et al. (2005) · fisiología y transcriptómica bajo CO₂ alto</h4>
+<p>
               Paper muy útil para respaldar que el CO₂ tiene efectos fisiológicos reales sobre <strong>S. cerevisiae</strong>. No es un paper de etanol final ni de vacío parcial.
             </p>
-            <div class="links">
-              <a href="https://pubmed.ncbi.nlm.nih.gov/15780657/" target="_blank" rel="noopener">PubMed</a>
-              <a href="https://doi.org/10.1016/j.femsyr.2004.09.009" target="_blank" rel="noopener">DOI</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>6) Reviews de contexto HG / VHG</h4>
-            <p>
+<div class="links">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15780657/" rel="noopener" target="_blank">PubMed</a>
+<a href="https://doi.org/10.1016/j.femsyr.2004.09.009" rel="noopener" target="_blank">DOI</a>
+</div>
+</div>
+<div class="source">
+<h4>7) Reviews de contexto HG / VHG</h4>
+<p>
               No prueban la mejora por presión, pero ayudan a enmarcar por qué un proceso VHG trabaja en una zona sensible a estrés osmótico, nutrientes, etanol y transferencia de masa.
             </p>
-            <div class="links">
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148118307146" target="_blank" rel="noopener">Puligundla et al. (2019)</a>
-              <a href="https://www.mdpi.com/2311-5637/7/1/38" target="_blank" rel="noopener">Gomes et al. (2021)</a>
-              <a href="Quantifying%20the%20Inhibitory%20Effects%20of%20Hyperbaric%20CO2%20and%20Hydrostatic%20Gradients%20on%20Saccharomyces%20cerevisiae%20in%20High-Gravity%20Corn%20Mash%20Fermentation.pdf" target="_blank" rel="noopener">Informe interno cargado</a>
-            </div>
-          </div>
-
-          <div class="source">
-            <h4>7) Fuentes económicas y de seguridad</h4>
-            <p>
+<div class="links">
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148118307146" rel="noopener" target="_blank">Puligundla et al. (2019)</a>
+<a href="https://www.mdpi.com/2311-5637/7/1/38" rel="noopener" target="_blank">Gomes et al. (2021)</a>
+<a href="Quantifying%20the%20Inhibitory%20Effects%20of%20Hyperbaric%20CO2%20and%20Hydrostatic%20Gradients%20on%20Saccharomyces%20cerevisiae%20in%20High-Gravity%20Corn%20Mash%20Fermentation.pdf" rel="noopener" target="_blank">Informe interno cargado</a>
+</div>
+</div>
+<div class="source">
+<h4>8) Fuentes económicas y de seguridad</h4>
+<p>
               Para que la proyección del supuesto final tenga una referencia económica y operativa consistente.
             </p>
-            <div class="links">
-              <a href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-25-2026-422866/texto" target="_blank" rel="noopener">Resolución 25/2026 · Secretaría de Energía</a>
-              <a href="https://www.bna.com.ar/" target="_blank" rel="noopener">Banco Nación Argentina</a>
-              <a href="https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/equipment-potentially-explosive-atmospheres-atex_en" target="_blank" rel="noopener">ATEX · European Commission</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="footer wrap" style="padding-left:0; padding-right:0;">
+<div class="links">
+<a href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-25-2026-422866/texto" rel="noopener" target="_blank">Resolución 25/2026 · Secretaría de Energía</a>
+<a href="https://www.bna.com.ar/" rel="noopener" target="_blank">Banco Nación Argentina</a>
+<a href="https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/equipment-potentially-explosive-atmospheres-atex_en" rel="noopener" target="_blank">ATEX · European Commission</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="footer wrap" style="padding-left:0; padding-right:0;">
         Documento HTML actualizado para presentación técnica. Este archivo deja explícito que la mejora de etanol esperada para 1.05 → 1.00 atm abs en Bio4 es un <strong>supuesto de ingeniería</strong> sustentado por un mecanismo plausible y por bibliografía compatible, pero no demostrado de forma directa por un paper idéntico al caso industrial de maíz VHG.
       </div>
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>
